@@ -39,7 +39,7 @@ jobs:
         uses: peter-evans/find-comment@v1
         id: fc
         with:
-          issue-number: $(echo $GITHUB_REF | awk 'BEGIN { FS = "/" } ; { print $3 }')
+          issue-number: ${{github.event.number}}
           body-includes: ParamsAre
           direction: first
       - run: |
