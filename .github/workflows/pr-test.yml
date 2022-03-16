@@ -39,7 +39,7 @@ jobs:
         uses: peter-evans/find-comment@v1
         id: fc
         with:
-          issue-number: 1
+          issue-number: $(jq --raw-output .pull_request.number "$GITHUB_EVENT_PATH")
           body-includes: ParamsAre
           direction: first
       - run: |
