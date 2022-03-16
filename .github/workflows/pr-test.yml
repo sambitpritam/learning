@@ -42,3 +42,7 @@ jobs:
           issue-number: 1
           body-includes: ParamsAre
           direction: last
+      - run: |
+          echo "Comment ID: ${{ steps.fc.outputs.comment-id }}"
+          echo "Comment Body: ${{ steps.fc.outputs.comment-body }}"
+          echo "Commented By: ${{ steps.fc.outputs.comment-author }}"
