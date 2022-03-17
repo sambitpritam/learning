@@ -30,7 +30,7 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Display PR Number
-        run: echo ${{ PR_NUMBER }}
+        run: echo $PR_NUMBER
 
 #       - name: Find Comment
 #         uses: peter-evans/find-comment@v1
