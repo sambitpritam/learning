@@ -27,13 +27,13 @@ jobs:
 
       # Runs a single command using the runners shell
       - name: Display PR Number
-        run: echo ${{ github.event.pull_request.number }}
+        run: echo ${{ github.pull_request.number }}
 
       - name: Find Comment
         uses: peter-evans/find-comment@v1
         id: fc
         with:
-          issue-number: ${{ github.event.pull_request.number }}
+          issue-number: ${{ github.pull_request.number }}
           body-includes: ParamsAre
           direction: first
       - run: |
